@@ -1,0 +1,45 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+<canvas id="myChart" width="200" height="100"></canvas>
+
+<script>
+
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['7:00am', '8:04am', '9:00am', '10:04am', '11:00am', '12:04pm'],
+        datasets: [{
+            label: 'How Many People in the United States Searched "Cupcake" on Google Today (3/10)',
+            data: [69, 77, 76, 84, 75, 82],
+            backgroundColor: [
+                'rgba(255, 0, 0, 0.2)',
+                'rgba(255, 165, 0, 0.2)',
+                'rgba(255, 220, 0, 0.2)',
+                'rgba(60, 179, 113, 0.2)',
+                'rgba(0, 0, 255, 0.2)',
+                'rgba(106, 90, 205, 0.2)'
+            ],
+            borderColor: [
+                'rgba(120, 120, 120, 0.2)',
+                'rgba(120, 120, 120, 0.2)',
+                'rgba(120, 120, 120, 0.2)',
+                'rgba(120, 120, 120, 0.2)',
+                'rgba(120, 120, 120, 0.2)',
+                'rgba(120, 120, 120, 0.2)'
+            ],
+            borderWidth: 5
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
