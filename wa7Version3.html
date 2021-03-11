@@ -6,6 +6,7 @@
 
 
 var ctx = document.getElementById('myChart').getContext('2d');
+
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
     data: {
@@ -33,16 +34,12 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                        tooltips: {
-            mode: 'point'
-        }
-                }
-            }]
+        animation: {
+            onProgress: function(animation) {
+                progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
+            }
         }
     }
 });
 </script>
+
