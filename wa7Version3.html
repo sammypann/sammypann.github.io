@@ -34,17 +34,17 @@ var myChart = new Chart(ctx, {
             borderWidth: 5
         }]
     },
-   options: {
-        tooltips: {
-            callbacks: {
-                labelColor: function(tooltipItem, chart) {
-                    return {
-                        borderColor: 'rgb(255, 0, 0)',
-                        backgroundColor: 'rgb(255, 0, 0)'
-                    };
-                },
-                labelTextColor: function(tooltipItem, chart) {
-                    return '#543453';
+    options: {
+        plugins: {
+            tooltip: {
+                usePointStyle: true,
+                callbacks: {
+                    labelPointStyle: function(context) {
+                        return {
+                            pointStyle: 'triangle',
+                            rotation: 0
+                        };
+                    }
                 }
             }
         }
