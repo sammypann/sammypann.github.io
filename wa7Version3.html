@@ -9,7 +9,7 @@
 var ctx = document.getElementById('myChart').getContext('2d');
 
 var myChart = new Chart(ctx, {
-    type: 'horizontalBar',
+    type: 'doughnut',
     data: {
         labels: ['7:00am', '8:04am', '9:00am', '10:04am', '11:00am', '12:04pm'],
         datasets: [{
@@ -34,10 +34,18 @@ var myChart = new Chart(ctx, {
             borderWidth: 5
         }]
     },
-    options: {
-        animation: {
-            onProgress: function(animation) {
-                progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
+   options: {
+        tooltips: {
+            callbacks: {
+                labelColor: function(tooltipItem, chart) {
+                    return {
+                        borderColor: 'rgb(255, 0, 0)',
+                        backgroundColor: 'rgb(255, 0, 0)'
+                    };
+                },
+                labelTextColor: function(tooltipItem, chart) {
+                    return '#543453';
+                }
             }
         }
     }
