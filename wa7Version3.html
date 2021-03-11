@@ -34,11 +34,8 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-        animation: {
-            onProgress: function(animation) {
-                progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
-            }
-        }
+        // This chart will not respond to mousemove, etc
+        events: ['click']
     }
 });
 </script>
