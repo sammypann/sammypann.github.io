@@ -9,14 +9,14 @@
 var ctx = document.getElementById('myChart').getContext('2d');
 
 var myChart = new Chart(ctx, {
-    type: 'doughnut',
+    type: 'horizontalBar',
     data: {
         labels: ['7:00am', '8:04am', '9:00am', '10:04am', '11:00am', '12:04pm'],
         datasets: [{
             label: 'How Many People in the United States Searched "Cupcake" on Google Today (3/10)',
             data: [69, 77, 76, 84, 75, 82],
             backgroundColor: [
-                'rgba(255,192,203, 0.2)',
+                'rgba(114,47,55, 0.2)',
                 'rgba(255,20,147, 0.2)',
                 'rgba(215,10,83, 0.2)',
                 'rgba(200,65,134, 0.2)',
