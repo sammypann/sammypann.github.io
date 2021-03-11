@@ -34,8 +34,9 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-        // This chart will not respond to mousemove, etc
-        events: ['click']
+        tooltips: {
+            mode: 'point'
+        }
     }
 });
 </script>
