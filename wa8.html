@@ -21,7 +21,7 @@ $.getJSON("wa8.json", function(data_from_file){
             labels: ['Total Amount of Precincts', 'Total Arrests', 'Average Arrests per Precinct'],
             datasets: [{
                 label: 'Traffic Stop Data',
-                backgroundColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgb(200, 65, 134)', 'rgba(114,47,55, 0.2)', 'rgba(255,20,147, 0.2)'
                 borderColor: 'rgb(255, 99, 132)',
                 data: [data_from_file["x"], data_from_file["y"], data_from_file["z"]]
             }]
