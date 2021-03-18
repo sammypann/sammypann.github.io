@@ -33,19 +33,13 @@ $.getJSON("wa8.json", function(data_from_file){
 
         // Configuration options go here
         options: {
-        scales: {
-                yAxes: [{
-                    display: true,
-                    stacked: true,
-                    ticks: {
-                        min: 0, // minimum value
-                        max: 1000 // maximum value
-                    }
-                }]
-            }
+        title: {
+            display: true,
+            fontSize: 16,
+            fontStyle: 'bold',
+            text: 'Traffic Stop Data'
         }
-    });
-
-})
+    }
+});
 
 </script>
