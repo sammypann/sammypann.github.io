@@ -18,12 +18,12 @@ $.getJSON("wa8.json", function(data_from_file){
 
         // The data for our dataset
         data: {
-            labels: ['Arrested', 'Not Arrested'],
+            labels: ['Arrested', 'Not Arrested', 'Average Arrests'],
             datasets: [{
                 label: 'Fake data',
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [data_from_file["x"], data_from_file["y"]],
+                data: [data_from_file["x"], data_from_file["y"]], [data_from_file["z"]
             }]
         },
 
