@@ -18,7 +18,6 @@
 				<!-- slide 1 -->
 				<section>
 					<h3>Why use reveal.js for presentations?</h3>
-					<p>
 					<ul>
 						<li>Reveal.js... </li>
 						<ul>
@@ -27,7 +26,6 @@
 							<li>All for free!</li>
 					</ul>
 					</ul>
-				</p>
 				</section>
 				<!-- slide 2 -->
 				<section>
@@ -37,15 +35,18 @@
 				</section>
 				<!-- slide 3 -->
 					<section>
-						<h3>Animating code blocks</h3>
+						<h3>How did I create this theme for this presentation?</h3>
+						<h5>Well, I used a very simple of line of code, accessing the reveal.js theme library.</h5>
 						<pre><code data-trim data-line-numbers=1,5|2-4|2|3|4><script type="text/template">
-							<pre><code data-trim data-line-numbers=1,5|2-4|2|3|4>
-								def addition(a,b):
-							          sum = a + b
-						           return sum
-						    </code></pre>
+							<title>reveal.js</title>
+
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/serif.min.css" id="theme">
+						</head>
 							</script></pre></code>
 						</code></pre>
+						<h5>Th third link references theme, under the "theme" id. In that link, I added the theme "serif", as that is the one I liked in the reveal.js library. </h5>
 					</section>
 				</section>
 			
