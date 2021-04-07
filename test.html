@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/simple.min.css" id="theme">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- slide 1 -->
+				<section data-transition="zoom">
+					<h3>Using Vega visualizations in reveal.js presentations!</h3>
+				</section>
+				
+				<!-- slide 2 -->
+				<section data-transition="zoom">
+					<h4>How can we add these visualizations?</h4>
+					<h6>Let's get started</h6>
+					<img src = "https://media.giphy.com/media/xT0xevozBTg7ChpL44/giphy.gif">
+				</section>
+
+				<!-- slide 3 -->
+					<section data-transition="zoom">
+						<h3>First step, you must add the tags to import Vega.</h3>
+						
+						<pre><code data-trim data-line-numbers=1,5|2-4|2|3|4><script type="text/template">				
+							<head>
+								<script src="https://cdn.jsdelivr.net/npm/vega@3">< /script>
+								<script src="https://cdn.jsdelivr.net/npm/vega-lite@2">< /script>
+								<script src="https://cdn.jsdelivr.net/npm/vega-embed@3">< /script>
+							</head>
+							<body>
+								<div id="vis"></div>
+								<script type="text/javascript">
+								var spec = {};  
+								var opt = {"renderer": "canvas", "actions": false};  
+								vegaEmbed("#vis", spec, opt);
+							</script>
+							</script></pre></code>
+						</code></pre>
+					</section>
+
+				<!-- slide 4 -->
+				<section data-transition="zoom">
+						<h3>Next, you add the Vega spec document into the "var spec = {}" line of code from before.</h3>
+						<pre><code data-trim data-line-numbers=1,5|2-4|2|3|4><script type="text/template">				
+<script type="text/javascript">
+		var spec = { 
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 400
+    }
+  },
+  "data": {
+    "url": "https://vega.github.io/vega-datasets/data/cars.json"
+  },
+  "encoding": {
+    "color": {
+      "field": "Origin",
+      "type": "nominal"
+    },
+    "x": {
+      "field": "Horsepower",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Miles_per_Gallon",
+      "type": "quantitative"
+    }
+  },
+  "mark": "point"
+};  
+							</script></pre></code>	
+						</code></pre>
+				</section>
+				</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+
+			Reveal.initialize({
+				hash: true,
+			});
+		</script>
+	</body>
+</html>
