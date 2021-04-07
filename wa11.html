@@ -87,44 +87,12 @@
 };  
 							</script></pre></code>	
 						</code></pre>
-					</section>
+				</section>
 
 				<!-- slide 5 -->
 				<section data-transition="zoom">
 					<h6>Now, let's look at some of these visualizations.</h6>
 					
-					<div id="vis"></div>
-	<script type="text/javascript">
-		var spec = { 
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "config": {
-    "view": {
-      "continuousHeight": 300,
-      "continuousWidth": 400
-    }
-  },
-  "data": {
-    "url": "https://vega.github.io/vega-datasets/data/jobs.json"
-  },
-  "encoding": {
-    "color": {
-      "field": "sex",
-      "type": "nominal"
-    },
-    "x": {
-      "field": "job",
-      "type": "quantitative"
-    },
-    "y": {
-      "field": "count",
-      "type": "quantitative"
-    }
-  },
-  "mark": "point"
-};  
-		var opt = {"renderer": "canvas", "actions": false};  
-		vegaEmbed("#vis", spec, opt);
-	</script>
 				</section>
 
 			
