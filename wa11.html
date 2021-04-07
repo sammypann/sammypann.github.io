@@ -27,19 +27,28 @@
 				
 				<!-- slide 2 -->
 				<section data-transition="zoom">
-					<h4>How can we create add these visualizations?</h4>
+					<h4>How can we add these visualizations?</h4>
 					<h6>Let's get started</h6>
 					<img src = "https://media.giphy.com/media/f6z5TkrTIBZILYOd1t/giphy.gif">
 				</section>
 
 				<!-- slide 3 -->
 					<section data-transition="zoom">
-						<h3>How did I create this theme for this presentation?</h3>
-						<h5>Well, I used a very simple of line of code, accessing the reveal.js theme library.</h5>
+						<h3>First step, one must add the tags to import Vega</h3>
+						
 						<pre><code data-trim data-line-numbers=1,5|2-4|2|3|4><script type="text/template">				
-							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
-							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/serif.min.css" id="theme">
+							<head>
+								<script src="https://cdn.jsdelivr.net/npm/vega@3">< /script>
+								<script src="https://cdn.jsdelivr.net/npm/vega-lite@2">< /script>
+								<script src="https://cdn.jsdelivr.net/npm/vega-embed@3">< /script>
+							</head>
+							<body>
+								<div id="vis"></div>
+								<script type="text/javascript">
+								var spec = {};  
+								var opt = {"renderer": "canvas", "actions": false};  
+								vegaEmbed("#vis", spec, opt);
+							< /script>
 							</script></pre></code>
 						</code></pre>
 						<h5>Th third link references theme, under the "theme" id. In that link, I added the theme "serif", as that is the one I liked in the reveal.js library. </h5>
