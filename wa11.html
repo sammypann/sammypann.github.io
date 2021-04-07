@@ -33,32 +33,9 @@
 					<img src = "https://media.giphy.com/media/xT0xevozBTg7ChpL44/giphy.gif">
 				</section>
 
-				<!-- slide 3 -->
-					<section>
-						<h3>First, we need to import the Vega tags.</h3>
-						<pre><code class="html" data-trim data-line-numbers=1,2,16|3-7|4-6|8-15|11|12|9,13><script type="text/template">
-							<!DOCTYPE html>
-							<html>
-							<head>
-								<script src="https://cdn.jsdelivr.net/npm/vega@3">< /script>
-								<script src="https://cdn.jsdelivr.net/npm/vega-lite@2">< /script>
-								<script src="https://cdn.jsdelivr.net/npm/vega-embed@3">< /script>
-							</head>
-							<body>
-								<div id="vis"></div>
-								<script type="text/javascript">
-									var spec = {};  /* JSON dump of your chart's spec */
-									var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
-									vegaEmbed("#vis", spec, opt);
-								< /script>
-							</body>
-							</html>
-						</script></code></pre>
-					</section>
-
 				<!-- slide 4 -->
 				<section data-transition="zoom">
-						<h3>Next, you add the Vega spec document into the "var spec = {}" line of code from before.</h3>
+						<h3>In order to import Vega, you must add the Vega spec document into the "var spec = {}" line of code, as seen below.</h3>
 						<pre><code data-trim data-line-numbers class="js">
 							{
 							  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
