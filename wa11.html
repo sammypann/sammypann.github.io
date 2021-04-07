@@ -119,10 +119,42 @@
     }
   },
   "mark": "point"
+}; 
+var opt = {"renderer": "canvas", "actions": false};  
+		vegaEmbed("#vis", spec, opt);
+	</script>
+<script type="text/javascript">
+		var spec = { 
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 400
+    }
+  },
+  "data": {
+    "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2.2.0/data/unemployment-across-industries.json"
+  },
+  "encoding": {
+    "color": {
+      "field": "series",
+      "type": "nominal"
+    },
+    "x": {
+      "field": "count",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "rate",
+      "type": "quantitative"
+    }
+  },
+  "mark": "point"
 };  
 		var opt = {"renderer": "canvas", "actions": false};  
 		vegaEmbed("#vis", spec, opt);
 	</script>
+		
 	<h5>From this visualization, we can see that most penguin species have a body mass over 5,000 g and flipper length over 150 mm.</h5>
 				</section>
 
