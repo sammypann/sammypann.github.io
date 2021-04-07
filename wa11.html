@@ -132,39 +132,9 @@ var opt = {"renderer": "canvas", "actions": false};
 			<!-- slide 6 -->
 <section data-transition="zoom">
 					<h5>Here is another visualization</h5>
-					<h5></h5>
-					<div id="vis"></div>
-	<script type="text/javascript">
-		var spec = { 
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "config": {
-    "view": {
-      "continuousHeight": 300,
-      "continuousWidth": 400
-    }
-  },
-  "data": {
-    "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2.2.0/data/unemployment-across-industries.json"
-  },
-  "encoding": {
-    "color": {
-      "field": "series",
-      "type": "nominal"
-    },
-    "x": {
-      "field": "count",
-      "type": "quantitative"
-    },
-    "y": {
-      "field": "rate",
-      "type": "quantitative"
-    }
-  },
-  "mark": "point"
-};  
-		var opt = {"renderer": "canvas", "actions": false};  
-		vegaEmbed("#vis", spec, opt);
-	</script>
+					<img src = "jobs.jpeg">
+					
+	
 	<h5></h5>
 				</section>
 			
