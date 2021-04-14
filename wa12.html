@@ -73,7 +73,7 @@
 							"width": 800,
 							"height": 200,
 							"data": {
-								"url": "https://vega.github.io/vega-datasets/data/jobs.json"
+								"url": "https://vega.github.io/vega-datasets/data/obesity.json"
 							},
 							"mark": {
 								"type":"bar",
@@ -81,17 +81,17 @@
 							},
 							"encoding": {
 								"x": {
-									"field": "job",
-									"type": "qualitative",
-									"title": "Job",
+									"field": "state",
+									"type": "temporal",
+									"title": "State",
 									"axis": {
 										"titleFontSize": 20
 									}
 								},
 								"y": {
-									"field": "count",
+									"field": "rate",
 									"type": "quantitative",
-									"title": "Count",
+									"title": "Rate",
 									"axis": {
 										"titleFontSize": 20
 									}
