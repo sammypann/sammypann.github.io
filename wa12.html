@@ -72,6 +72,9 @@
 							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 							"width": 800,
 							"height": 200,
+							"config":{
+								"font":"Times New Roman"
+							},
 							"data": {
 								"url": "https://vega.github.io/vega-datasets/data/obesity.json"
 							},
@@ -85,15 +88,15 @@
 									"type": "temporal",
 									"title": "State",
 									"axis": {
-										"titleFontSize": 20
+										"titleFontSize": 15
 									}
 								},
 								"y": {
 									"field": "rate",
-									"type": "temporal",
+									"type": "quantitative",
 									"title": "Rate",
 									"axis": {
-										"titleFontSize": 20
+										"titleFontSize": 15
 									}
 								}
 							}
