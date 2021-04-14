@@ -65,7 +65,7 @@
 				<section>
 						<h2>Visualization #1!</h2>
 						
-						<div id="crimea-bars"></div>
+						<div id="jobs-bars"></div>
 						
 						<script type="text/javascript">
 						var spec = {
@@ -73,7 +73,7 @@
 							"width": 800,
 							"height": 200,
 							"data": {
-								"url": "https://vega.github.io/vega-datasets/data/crimea.json"
+								"url": "https://vega.github.io/vega-datasets/data/jobs.json"
 							},
 							"mark": {
 								"type":"bar",
@@ -81,25 +81,25 @@
 							},
 							"encoding": {
 								"x": {
-									"field": "date",
-									"type": "temporal",
-									"title": "Date",
+									"field": "job",
+									"type": "qualitative",
+									"title": "Job",
 									"axis": {
-										"titleFontSize": 15
+										"titleFontSize": 20
 									}
 								},
 								"y": {
-									"field": "wounds",
+									"field": "count",
 									"type": "quantitative",
-									"title": "Number of wounded",
+									"title": "Count",
 									"axis": {
-										"titleFontSize": 15
+										"titleFontSize": 20
 									}
 								}
 							}
 						};
 						var opt = {"renderer": "canvas", "actions": false};
-						vegaEmbed("#crimea-bars", spec, opt);
+						vegaEmbed("#jobs-bars", spec, opt);
 						</script>
 					</section>
 				</section>
