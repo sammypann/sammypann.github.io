@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>wa12</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/simple.min.css" id="theme">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+
+		<script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- slide 1 -->
+				<section data-transition="zoom">
+					<h3>Using Vega visualizations in reveal.js presentations!</h3>
+				</section>
+				
+				<!-- slide 2 -->
+				<section data-transition="zoom">
+					<h4>How can we add these visualizations?</h4>
+					<h6>Let's get started</h6>
+					<img src = "https://media.giphy.com/media/xT0xevozBTg7ChpL44/giphy.gif">
+				</section>
+
+				<!-- slide 4 -->
+				<section data-transition="zoom">
+						<h5>In order to import Vega, you must add the Vega spec document into the "var spec = {}" line of code, as seen below.</h5>
+						<pre><code data-trim data-line-numbers class="js">
+{
+"$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+"config": {
+"view": {
+"continuousHeight": 300,
+"continuousWidth": 400
+}
+},
+"data": {
+"url": "https://vega.github.io/vega-datasets/data/cars.json"
+},
+"encoding": {
+"color": {
+"field": "Origin",
+"type": "nominal"
+},
+"x": {
+"field": "Horsepower",
+"type": "quantitative"
+},
+"y": {
+"field": "Miles_per_Gallon",
+"type": "quantitative"
+}
+"mark": "point"
+};
+						</code></pre>
+						<h5>*** this is just an example dataset.</h5>
+				</section>
+
+				<!-- slide 5 -->
+				<section data-transition="zoom">
+					<h5>Now, let's look at some of these visualizations.</h5>
+					<h5>This dataset represents the relationship of penguin species to their body mass and flipper length.</h5>
+					<div id="vis"></div>
+	<script type="text/javascript">
+		var spec = { 
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 400
+    }
+  },
+  "data": {
+    "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2.2.0/data/penguins.json"
+  },
+  "encoding": {
+    "color": {
+      "field": "Species",
+      "type": "nominal"
+    },
+    "x": {
+      "field": "Body Mass (g)",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Flipper Length (mm)",
+      "type": "quantitative"
+    }
+  },
+  "mark": "point"
+}; 
+var opt = {"renderer": "canvas", "actions": false};  
+		vegaEmbed("#vis", spec, opt);
+	</script>	
+	<h5>From this visualization, we can see that most penguin species have a body mass over 5,000 g and flipper length over 150 mm.</h5>
+				</section>
+
+			<!-- slide 6 -->
+<section data-transition="zoom">
+					<h5>Here is another visualization</h5>
+					<img src = "jobs.jpeg">
+					<h5>This visualization represents unemployment across industries. As we can see, most industries have an unemployment rate less than 5 with less than 500 counts.</h5>
+				</section>
+			
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+
+			Reveal.initialize({
+				hash: true,
+			});
+		</script>
+	</body>
+</html>
+
