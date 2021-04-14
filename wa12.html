@@ -33,9 +33,46 @@
 						<h5>Shown below is the code used to create the first visualization.</h5>
 						<pre><code data-trim data-line-numbers class="js">
 {
-	
+	< div id="obesity-bars"></div>
+						
+						< script type="text/javascript">
+						var spec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"width": 1000,
+							"height": 300,
+							"config":{
+								"font":"garamond"
+							},
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/obesity.json"
+							},
+							"mark": {
+								"type":"bar",
+								"color":"pink"
+							},
+							"encoding": {
+								"x": {
+									"field": "state",
+									"type": "nominal",
+									"title": "State",
+									"axis": {
+										"titleFontSize": 15
+									}
+								},
+								"y": {
+									"field": "rate",
+									"type": "quantitative",
+									"title": "Rate",
+									"axis": {
+										"titleFontSize": 15
+									}
+								}
+							}
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#obesity-bars", spec, opt);
+						< /script>
 }
-
 						</code></pre>
 				</section>
 
