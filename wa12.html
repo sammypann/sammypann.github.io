@@ -62,43 +62,46 @@
 				</section>
 
 				<!-- slide -->
-				<section data-transition="concave">
-					<h5>Visualization #1</h5>
-					<h5> what is this data showing <h5>
-					<div id="vis"></div>
-	<script type="text/javascript">
-		var spec = { 
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "config": {
-    "view": {
-      "continuousHeight": 300,
-      "continuousWidth": 400
-    }
-  },
-  "data": {
-    "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2.2.0/data/penguins.json"
-  },
-  "encoding": {
-    "color": {
-      "field": "Species",
-      "type": "nominal"
-    },
-    "x": {
-      "field": "Body Mass (g)",
-      "type": "quantitative"
-    },
-    "y": {
-      "field": "Flipper Length (mm)",
-      "type": "quantitative"
-    }
-  },
-  "mark": "point"
-}; 
-var opt = {"renderer": "canvas", "actions": false};  
-		vegaEmbed("#vis", spec, opt);
-	</script>	
-	<h5> interpretation of data </h5>
+				<section>
+						<h2>Visualization #1!</h2>
+
+						<div id="jobs-scatter"></div>
+						
+						<script type="text/javascript">
+						var spec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/jobs.json"
+							},
+							"width":800,
+							"height":400,
+							"config":{
+								"font":"Times New Roman"
+							},
+							"mark": "point",
+							"encoding": {
+								"x": {
+									"field": "job",
+									"type": "qualitative",
+									"scale": {"zero": false}
+								},
+								"y": {
+									"field": "count",
+									"type": "quantitative",
+									"scale": {"zero": false}
+								},
+								"shape": {
+									"field": "sex",
+									"type": "nominal"
+								}
+							}	
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#penguins-scatter", spec, opt);
+						</script>
+					</section>
 				</section>
+
 
 				<!-- slide -->
 				<section data-transition="concave">
