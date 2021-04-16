@@ -142,7 +142,10 @@ vegaEmbed("#obesity-bars", spec, opt);
   						"data": {
     					"url": "https://cdn.jsdelivr.net/npm/vega-datasets@2.2.0/data/penguins.json"
   						},
-  						"mark": "bar",
+  						"mark": {
+  							"type":"bar",
+  							"color":"pink"
+  						},
 							"encoding": {
 								"x": {
 									"field": "Body Mass (g)",
