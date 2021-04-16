@@ -142,22 +142,21 @@ vegaEmbed("#obesity-bars", spec, opt);
   						"data": {
     					"url": "https://cdn.jsdelivr.net/npm/vega-datasets@2.2.0/data/penguins.json"
   						},
-
- 						"encoding": {
-    					"color": {
-      					"field": "Species",
-      					"type": "nominal"
-    					},
+  						"mark": {
+								"type":"bar",
+						},
    						"x": {
-     					"field": "Body Mass (g)",
-      					"type": "quantitative"
+     					"field": "Species",
+      					"type": "nominal"
     					},
     					"y": {
       					"field": "Flipper Length (mm)",
       					"type": "quantitative"
     						}
-  						},
-  						"mark": "point"
+    					"column": {
+    						"field": "Origin",
+							"type": "nominal"
+								}
 						}; 
 						var opt = {"renderer": "canvas", "actions": false};  
 						vegaEmbed("#penguin-vis", spec, opt);
