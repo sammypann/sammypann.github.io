@@ -125,17 +125,9 @@ vegaEmbed("#obesity-bars", spec, opt);
 
 				<!-- slide -->
 				<section data-transition="concave">
-					<h5>Here is another example of how a visualization was made through code. The product of this code can be seen on the next slide.</h5>
-					<pre><code data-trim data-line-numbers class="js">
-
-				</code></pre>
-				</section>
-
-				<!-- slide -->
-				<section data-transition="concave">
-					<h5>Visualization #2</h5>
-
-					<div id="penguin-bar"></div>
+					<h5>Now, let's look at some of these visualizations.</h5>
+					<h5>This dataset represents the relationship of penguin species to their body mass and flipper length.</h5>
+					<div id="penguin-vis"></div>
 	<script type="text/javascript">
 		var spec = { 
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -165,12 +157,11 @@ vegaEmbed("#obesity-bars", spec, opt);
   "mark": "point"
 }; 
 var opt = {"renderer": "canvas", "actions": false};  
-		vegaEmbed("#penguin-bar", spec, opt);
+		vegaEmbed("#penguin-vis", spec, opt);
 	</script>	
-
-					<h5> what is this data showing </h5>
-					<h5> interpretation </h5>
+	<h5>From this visualization, we can see that most penguin species have a body mass over 5,000 g and flipper length over 150 mm.</h5>
 				</section>
+
 
 				<!-- slide -->
 				<section data-transition="concave">
