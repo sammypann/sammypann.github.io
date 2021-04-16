@@ -134,6 +134,40 @@ vegaEmbed("#obesity-bars", spec, opt);
 				<!-- slide -->
 				<section data-transition="concave">
 					<h5>Visualization #2</h5>
+
+					<div id="penguin-bar"></div>
+	<script type="text/javascript">
+		var spec = { 
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 400
+    }
+  },
+  "data": {
+    "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2.2.0/data/penguins.json"
+  },
+  "encoding": {
+    "color": {
+      "field": "Species",
+      "type": "nominal"
+    },
+    "x": {
+      "field": "Body Mass (g)",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Flipper Length (mm)",
+      "type": "quantitative"
+    }
+  },
+  "mark": "point"
+}; 
+var opt = {"renderer": "canvas", "actions": false};  
+		vegaEmbed("#penguin-bar", spec, opt);
+	</script>	
+
 					<h5> what is this data showing </h5>
 					<h5> interpretation </h5>
 				</section>
