@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/simple.min.css" id="theme">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- slide 1 -->
+				<section data-transition="zoom">
+					<h2>INFO 4602 Final Spring 2022</h2>
+					<h3>Sammy Pann and Sydney Kingsepp</h3>
+				</section>
+				
+				<!-- slide 2 -->
+				<section data-transition="zoom">
+					<h3>The Problem</h3>
+					<h6>The lifestyle of a college student can be extremely detrimental to their health. Between academic pressure, social pressure, future career planning pressure, etc., university students oftentimes find themselves partaking in unhealthy habits that will affect them later on in life. These stressors can lead to binge drinking, lack of sleep, a poor diet, and even more that will end in illness or the inability to perform at their best. For our project, we wanted to showcase how to lead a healthier lifestyle and display how to improve the health of the college experience. </h6>
+				<!--	<img src = "https://media.giphy.com/media/f6z5TkrTIBZILYOd1t/giphy.gif"> -->
+				</section>
+
+				<!-- slide 3 -->
+					<section data-transition="zoom">
+						<h3>The Data</h3>
+						<h6>While looking at various different types of data to portray how to live a healthier lifestyle, we came across this
+						<a href="https://www.kaggle.com/datasets/prasertk/healthy-lifestyle-cities-report-2021">dataset.</a> Here, we analyzed the metrics of a healthy lifestyle in popular cities across the globe. </h6>
+					</section>
+
+				<!-- slide 4 -->
+				<section data-transition="zoom">
+						<h3>How about the fun GIF I added in the earlier slide?</h3>
+						<h5>Again, it was a simple addition.</h5>
+						<pre><code data-trim data-line-numbers=1,5|2-4|2|3|4><script type="text/template">				
+							<section>
+							<h4>So how can we create these stunning presentations?</h3>
+							<h6>Let's get started</h6>
+							<img src = "https://media.giphy.com/media/f6z5TkrTIBZILYOd1t/giphy.gif">
+							</section>
+							</script></pre></code>	
+						</code></pre>
+						<h5>Making sure it was under the correct section for the slide I wanted, I added the GIF's URL from <a ref="https://giphy.com/">https://giphy.com.</h5>
+					</section>
+
+				<!-- slide 5 -->
+				<section data-transition="zoom">
+					<h6>While these features are just the very tip of the iceberg in working with reveal.js, everyone has to start somewhere. For more information on how to use reveal.js, refer to the resources below.</h6>
+					<h8>
+					<li><a href="https://revealjs.com/">https://revealjs.com/</a></li>
+					<li><a href="https://gallery.leapmotion.com/reveal-js-example-presentation/">https://gallery.leapmotion.com/reveal-js-example-presentation/</a></li>
+					<li><a href="https://opensource.com/article/20/4/create-web-tutorial-git">https://opensource.com/article/20/4/create-web-tutorial-git</a></li>
+					</h8>
+
+
+				</section>
+
+			
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+
+			Reveal.initialize({
+				hash: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
